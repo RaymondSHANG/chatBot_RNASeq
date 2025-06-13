@@ -1,7 +1,7 @@
-from Graph.graph_builder import SupplyChainGraph
+from graph.graph_builder import ChatbotGraph
 
 def run():
-    graph = SupplyChainGraph().build()
+    graph = ChatbotGraph().build()
     state = {
     'user_query': '',
     'valid_stores': [],

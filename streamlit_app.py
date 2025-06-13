@@ -1,5 +1,5 @@
 import streamlit as st
-from Graph.graph_builder import SupplyChainGraph
+from graph.graph_builder import ChatbotGraph
 
 st.set_page_config(page_title="test", page_icon="📦")
 st.title("📦 Chatbot_RNASeq")
@@ -17,9 +17,9 @@ if "state" not in st.session_state:
     }
 
 if "graph" not in st.session_state:
-    st.session_state.graph = SupplyChainGraph().build()
+    st.session_state.graph = ChatbotGraph().build()
 
-chat_input = st.chat_input("What supply chain issue can I help with?")
+chat_input = st.chat_input("Hi, how can I help you?")
 if chat_input:
     st.session_state.state["user_query"] = chat_input
     result = st.session_state.graph.invoke(st.session_state.state)

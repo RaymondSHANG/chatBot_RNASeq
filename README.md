@@ -22,7 +22,6 @@ chatBot_RNASeq
 ├── streamlit_app.py
 └── utils
     ├── config.py
-    └── db_tools.py
 
 
 ## Setup and Run
@@ -36,7 +35,7 @@ chatBot_RNASeq
 2. Create a Conda environment:
 
    ```bash
-   conda create -n chatBot_RNASeq python=3.10 -y
+   conda create -n chatBot_RNASeq python=3.12 -y
    conda activate chatBot_RNASeq
    ```
 

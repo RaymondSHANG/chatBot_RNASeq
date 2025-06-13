@@ -1,15 +1,15 @@
 from langgraph.graph import StateGraph, END
-from Agents.manager_agent import ManagerAgent
-from Agents.sql_generator_agent import SQLGeneratorAgent
-from Agents.sql_executor_agent import SQLExecutorAgent
-from Agents.root_cause_agent import RootCauseAnalyzer
-from Agents.clarifier import ClarificationNode
-from Graph.nodes import WelcomeNode  # or from Graph.nodes import WelcomeNode
+from agents.manager_agent import ManagerAgent
+from agents.sql_generator_agent import SQLGeneratorAgent
+from agents.sql_executor_agent import SQLExecutorAgent
+from agents.root_cause_agent import RootCauseAnalyzer
+from agents.clarifier import ClarificationNode
+from graph.nodes import WelcomeNode  # or from Graph.nodes import WelcomeNode
 import logging
 
 logging.basicConfig(level=logging.INFO)
 
-class SupplyChainGraph:
+class ChatbotGraph:
     def __init__(self):
         self.welcome = WelcomeNode()
         self.manager = ManagerAgent()
